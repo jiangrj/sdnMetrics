@@ -1,0 +1,38 @@
+grafana:
+    server: 9.2.131.136
+    port: 3000
+    api_key: Bearer ******
+
+metrics:
+    - metric: fabcon_iob_fw_stats_TcpConnDurationHist_bucket
+      region: us-south-prod
+      labels:
+      time_range:
+          start: 2023-08-01 00:00:00
+          end: 2023-08-02 00:00:00
+      enabled: true
+
+    - metric: fabcon_iob_fw_stats_TcpConnDurationHist_bucket
+      region: us-south-prod
+      labels:
+        - agent_tag_mzone_name="mzone717"
+      time_range:
+          start: 2023-08-01 00:00:00
+          end: 2023-08-02 00:00:00
+      enabled: true
+
+    - metric: fabcon_iob_fw_stats_VnicNewTcpConnRateHist_bucket
+      region: us-south-prod
+      labels:
+      time_range:
+        start: 2023-08-01 00:00:00
+        end: 2023-08-01 00:00:00
+      enabled: true
+
+    - metric: fabcon_iob_fw_stats_VnicNewUdpConnRateHist_bucket
+      region: us-south-prod
+      labels:
+      time_range:
+        start: 2023-08-01 00:00:00
+        end: 2023-08-01 00:00:00
+      enabled: true
